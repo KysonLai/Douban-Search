@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link href="../main.css" rel="stylesheet">
+    <link href="../style/theme.css" rel="stylesheet">
+    <script src="../index.js" defer="defer"></script>
+    <script src="../js/util.js" defer="defer"></script>
+    <script src="../js/jquery-3.2.1.js" defer="defer"></script>
+
+    <title>豆瓣电影</title>
+</head>
+<body>
+
+    <!--导航-->
+    <header>
+        <nav>
+            <a href="../index.html" data-hover="豆瓣图书">豆瓣图书</a>
+            <a href="#" data-hover="豆瓣电影">豆瓣电影</a>
+        </nav>
+    </header>
+
+    <section>
+        <!--搜索框-->
+        <div class="search">
+            <label for="search-input"></label>
+            <input type="text" id="search-input" placeholder="请输入"/>
+            <label for="search-select"></label>
+            <select id="search-select">
+                <option value="0">电影名</option>
+                <option value="1">类 型</option>
+            </select>
+            <button onclick="getMovieInfo()">搜索</button>
+        </div>
+        <!--搜索结果-->
+        <div class="result" id="result">
+            <!--搜索结果数量-->
+            <div id="result-count"></div>
+            <!--搜索结果表格-->
+            <table>
+                <!--表头-->
+                <thead>
+                    <tr>
+                        <th>电影名</th>
+                        <th>类型</th>
+                        <th>导演</th>
+                        <th>上映年份</th>
+                        <th  id="th-sort">平均评分 <img src="../imgs/icon-sort.png" /></th>
+                    </tr>
+                </thead>
+                <!--主体-->
+                <tbody id="result-tbody">
+                <!--<tr>-->
+                <!--<td><a href="#">Kyson</a></td><td>男</td><td>11111111111111</td><td>2</td><td>3</td>-->
+                <!--</tr>-->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</body>
+</html>

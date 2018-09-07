@@ -1,0 +1,21 @@
+/*
+* 主题颜色
+*/
+header {
+    background-color: #393d49;
+}
+.search button,
+th {
+    background-color: #1e9fff;
+}
+
+/*奇数行*/
+tr:nth-child(odd) {
+    background: #fff;
+}
+
+/*偶数行*/
+tr:nth-child(even) {
+    background: rgb(208,215,233);
+}
+
